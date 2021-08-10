@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'); */
+
+* {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	/* outline: 1px solid black; */
+}
+
+html {
+	font-size: 62.5%;
+	overflow: hidden;
+}
+
+body {
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+
+	background-color: #fafafa;
+}
+
+div.app-container {
+	/* max-width: 50rem; */
+	width: 46rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	max-height: 87rem;
+	/* height: 100rem; */
+	height: 100vh;
+	color: #fff;
+	font-weight: 400;
+
+	background-color: #abe9cd;
+	background-image: linear-gradient(345deg, #77e4b3 0%, #3eadcf 74%);
+	border-radius: 3rem;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+		rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+		rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+header {
+	min-width: 40rem;
+	min-height: 25rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	max-height: 70rem;
+	height: 100%;
+	/* background-image: url(./billy-huynh-v9bnfMCyKbg-unsplash.jpg);
+	background-size: cover; */
+	padding: 10%;
+}
+
+form {
+	text-align: center;
+}
+input {
+	text-align: center;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	border: 0.2rem solid #fff;
+	color: #fff;
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+		rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+
+	background-color: transparent;
+}
+
+input:focus {
+	outline: none;
+}
+input::placeholder {
+	color: rgba(255, 255, 255, 0.562);
+}
+
+div.weather-now {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+h2 {
+	font-size: 3rem;
+	margin: 1rem;
+
+	font-weight: 400;
+	/* color: rgba(0, 0, 0, 0.76); */
+}
+h1 {
+	font-size: 6rem;
+	margin: 1rem;
+	font-weight: 200;
+	/* color: rgba(0, 0, 0, 0.76); */
+}
+span {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 10%;
+}
+div.day {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0rem 3rem;
+}
+
+h5 {
+	font-size: 2.1rem;
+	margin: 1rem;
+	font-weight: 300;
+}
+svg {
+	width: 4rem;
+	height: 4rem;
+	fill: #000000;
+}
+
+path {
+	fill: #fff !important;
+}

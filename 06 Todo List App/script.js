@@ -69,10 +69,13 @@ function updateLS() {
 
 function loadLS() {
 	const todosArr = JSON.parse(localStorage.getItem("todosArr"));
-
-	todosArr.forEach((listItemObj) => {
-		if (listItemObj.todoContent) {
-			addListItems(listItemObj);
-		}
-	});
+	if (todosArr) {
+		todosArr.forEach((listItemObj) => {
+			if (listItemObj.todoContent) {
+				addListItems(listItemObj);
+			}
+		});
+	} else {
+		return;
+	}
 }

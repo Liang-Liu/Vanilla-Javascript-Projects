@@ -25,16 +25,25 @@ const cityWeatherURL = `api/location/`;
 fetchCityId(city);
 
 async function fetchCityId(city) {
+	loading();
 	const resp = await fetch(APIURL + citySearchURL + city);
 	const respData = await resp.json();
-
-	fetchCityWeatherById(respData[0].woeid);
+	if (respData.length === 0) {
+		notFound();
+		return;
+	}
+	if (respData.length !== 0) {
+		fetchCityWeatherById(respData[0].woeid);
+	}
 }
 
 async function fetchCityWeatherById(woeid) {
 	const resp = await fetch(APIURL + cityWeatherURL + woeid);
 	const respData = await resp.json();
-
+	if (!respData) {
+		notFound();
+		return;
+	}
 	loadWeather(respData);
 }
 
@@ -58,4 +67,19 @@ function loadWeather(respData) {
 
 		mainEl.appendChild(dayEl);
 	});
+}
+function loading() {
+	h1El.innerHTML = "";
+	h2El.innerHTML = "";
+	spanEl.innerHTML = "";
+	mainEl.innerHTML = "";
+	h1El.innerHTML = `Loading...`;
+}
+
+function notFound() {
+	h1El.innerHTML = "";
+	h2El.innerHTML = "";
+	spanEl.innerHTML = "";
+	mainEl.innerHTML = "";
+	spanEl.innerHTML = `Oops! Nothing was found...`;
 }
